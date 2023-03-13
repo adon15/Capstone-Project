@@ -69,3 +69,4 @@
         module: copy
         content: "{{ worker_node_output }}"
         dest: "{{ output_dir }}/worker_output" 
+
