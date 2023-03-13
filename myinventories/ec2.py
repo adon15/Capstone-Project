@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 '''
 EC2 external inventory script
 =================================
