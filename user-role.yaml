@@ -1,0 +1,29 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: User-Role
+rules:
+- apiGroups:
+  - '*'
+  resources:
+  - '*'
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - delete
+  - update
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: user4-role-binding
+subjects:
+- kind: User
+  name: user4
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: User-Role
+  apiGroup: rbac.authorization.k8s.io
